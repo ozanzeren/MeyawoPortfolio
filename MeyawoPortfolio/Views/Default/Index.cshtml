@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Partial("/Views/Default/HeadPartial.cshtml")
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    @Html.Partial("/Views/Default/NavbarPartial.cshtml")
+    <!-- End of Page Navbar -->
+
+    <!-- page header -->
+    @Html.Action("FuturePartial")
+    <!-- end of page header -->
+
+    <!-- about section -->
+    @Html.Action("AboutPartial")
+    <!-- end of about section -->
+
+    <!-- service section -->
+    @Html.Action("ServicePartial")
+    <!-- end of service section -->
+
+    <!-- project section -->
+    @Html.Action("ProjectPartial")
+    <!-- end of portfolio section -->
+
+    <!-- testimonial section -->
+   @Html.Action("TestimonialPartial")
+    <!-- end of testimonial section -->
+
+   
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" placeholder="Enter Email" requried>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                                  placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                    </div>
+                </div>
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section> 
+    <!-- end of contact section -->
+
+    <!-- footer -->
+   @Html.Action("FooterPartial")
+    <!-- end of page footer -->
+
+    <!-- core  -->
+    <script src="~/Template/meyawo-1.0.0/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="~/Template/meyawo-1.0.0/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="~/Template/meyawo-1.0.0/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="~/Template/meyawo-1.0.0/assets/js/meyawo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="app">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <section class="section">
+                    <h1 class="section-header">
+                        <div>Dashboard</div>
+                    </h1>
+                    <div class="row">
+                        @*Kategori Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-primary">
+                                    <i class="ion ion-person"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-danger">
+                                        <font color="White" font size="4">Toplam Kategori</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.categoryCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Proje Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-danger">
+                                    <i class="ion ion-ios-paper-outline"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-secondary">
+                                        <font color="White" font size="4">Toplam Proje</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.projectCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Mesaj Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-warning">
+                                    <i class="ion ion-paper-airplane"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-warning">
+                                        <font color="White" font size="4">Toplam Mesaj</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.messageCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Okunmamış Mesaj Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-success">
+                                    <i class="ion ion-record"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-info">
+                                        <font color="White" font size="4">Okunmamış Mesajlar</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.isNotReadMessageCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row">
+                        @*Son Eklenen Proje*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-primary">
+                                    <i class="ion ion-person"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-light">
+                                        <font color="Black" font size="4">Son Eklenen Proje</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.lastProjectName
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*C# Proje Sayisi*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-danger">
+                                    <i class="ion ion-ios-paper-outline"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-primary">
+                                        <font color="White" font size="4">C# Proje Sayısı</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.cSharpProjectCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Flutter Proje Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-warning">
+                                    <i class="ion ion-paper-airplane"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-success">
+                                        <font color="White" font size="4">Flutter Proje Sayısı</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.flutterProjectCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*Referans Sayısı*@
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="card card-sm-3">
+                                <div class="card-icon bg-success">
+                                    <i class="ion ion-record"></i>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card-header bg-dark">
+                                        <font color="White" font size="4">Referans Sayısı</font>
+                                    </div>
+                                    <div class="card-body">
+                                        @ViewBag.testimonialCount
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row">
+                        @*Grafikli Istastistik*@
+                        <div class="col-lg-6 col-md-10 col-10 col-sm-10">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Kategoriler</h4>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myChart2" height="150"></canvas>
+                            </div>
+                        </div>
+                        @*Referans Yorumları*@
+                        <div class="col-lg-4 col-md-10 col-10 col-sm-10">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Son Referans Yorumu</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled list-unstyled-border">
+                                        <li class="media">
+                                            <img class="mr-3 rounded-circle" width="50" src="~/Template/meyawo-1.0.0/assets/imgs/avatar2.jpg" alt="avatar">
+                                            <div class="media-body">
+                                                <div class="media-title">Hasan Hüseyin</div>
+                                                <small>@ViewBag.lastReferanceComment<</small>
+                                            </div>             
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Template/stisla-admin-template-master/dist/modules/chart.min.js"></script>
+
+    <script>
+        var ctx = document.getElementById("myChart2").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Flutter", "Python", "C#", "Asp.Net Mvc", "Asp.Net Core", "React Native", "Saturday"],
+                datasets: [{
+                    label: 'Sayı',
+                    data: [2,1,2,3,1,1],
+                    borderWidth: 2,
+                    backgroundColor: 'rgb(87,75,144)',
+                    borderColor: 'rgb(87,75,144)',
+                    borderWidth: 2.5,
+                    pointBackgroundColor: '#ffffff',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 5
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            display: false
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+            }
+        });
+    </script>
+    <script src="~/Template/stisla-admin-template-master/dist/js/scripts.js"></script>
+    <script src="~/Template/stisla-admin-template-master/dist/js/custom.js"></script>
+    <script src="~/Template/stisla-admin-template-master/dist/js/demo.js"></script>
+</body>
+</html>
+
+

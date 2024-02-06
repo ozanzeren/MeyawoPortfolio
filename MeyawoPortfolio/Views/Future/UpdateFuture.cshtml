@@ -1,0 +1,22 @@
+﻿@model MeyawoPortfolio.Models.TblFuture
+@{
+    ViewBag.Title = "UpdateFuture";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Öne Çıkanları Güncelleme Sayfası</h2>
+<form method="post">
+    <label>Öne Çıkan Id</label>
+    <input type="text" class="table table-bordered" value="@Model.FutureID" name="FutureID" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+    <br />
+    <label>Header</label>
+    <input type="text" class="table table-bordered" value="@Model.Header" name="Header" />
+    <br />
+    <label>İsim Soyisim</label>
+    <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
+    <br />
+    <button class="btn btn-info">Öne Çıkanı Güncelle</button>
+</form>
