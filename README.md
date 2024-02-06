@@ -1,1 +1,1 @@
-![alt text](http://url/to/https://i.hizliresim.com/bpexbdp.png)
+![alternatif metin](https://i.hizliresim.com/bpexbdp.png)
